@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>photools - Perangkat Lunak Cetak Foto Desktop</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/Icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -14,7 +14,7 @@
                     colors: {
                         photoolsDark: '#2D3E50',
                         photoolsLight: '#EFF0F1',
-                        photoolsAccent: '#6B7280' /* Changed from blue to gray */
+                        photoolsAccent: '#6B7280'
                     }
                 }
             }
@@ -27,20 +27,64 @@
             font-family: Verdana, Arial, sans-serif;
             font-size: 14px;
         }
+
         a {
-            color: #4B5563; /* Gray instead of blue */
+            color: #4B5563;
             text-decoration: none;
             font-weight: 500;
         }
+
         a:hover {
             text-decoration: underline;
             color: #1F2937;
         }
+
         .header-top {
             background-color: #2D3E50;
             color: #FFFFFF;
-            border-bottom: 4px solid #6B7280; /* Gray accent */
+            border-bottom: 4px solid #6B7280;
         }
+
+        .github-corner {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 140px;
+            height: 140px;
+            z-index: 100;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            background-color: #4B5563;
+            transition: background-color 0.2s;
+        }
+
+        .github-corner:hover {
+            background-color: #374151;
+            text-decoration: none !important;
+        }
+
+        .github-corner svg {
+            position: absolute;
+            top: 28px;
+            right: 24px;
+            width: 52px;
+            height: 52px;
+            fill: #FFFFFF;
+        }
+
+        @media (max-width: 640px) {
+            .github-corner {
+                width: 100px;
+                height: 100px;
+            }
+
+            .github-corner svg {
+                top: 18px;
+                right: 16px;
+                width: 38px;
+                height: 38px;
+            }
+        }
+
         .section-header {
             background-color: #F3F4F6;
             color: #1F2937;
@@ -48,24 +92,25 @@
             font-weight: bold;
             margin-top: 24px;
             margin-bottom: 12px;
-            border-left: 4px solid #6B7280; /* Gray accent */
+            border-left: 4px solid #6B7280;
             font-size: 16px;
         }
+
         .sidebar-header {
             background-color: #E5E7EB;
             color: #1F2937;
             padding: 6px 10px;
             font-weight: bold;
             margin-bottom: 8px;
-            border-left: 4px solid #6B7280; /* Gray accent */
+            border-left: 4px solid #6B7280;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
+
         th {
             background-color: #F9FAFB;
             color: #374151;
@@ -75,27 +120,33 @@
             border: 1px solid #E5E7EB;
             border-bottom: 2px solid #D1D5DB;
         }
+
         td {
             padding: 10px;
             background-color: #FFFFFF;
             border: 1px solid #E5E7EB;
         }
+
         tr:nth-child(even) td {
             background-color: #F9FAFB;
         }
+
         .btn-download {
             display: inline-block;
-            background-color: #4B5563; /* Gray background */
+            background-color: #4B5563;
             color: white !important;
             padding: 6px 12px;
             border-radius: 4px;
             font-weight: bold;
             text-decoration: none !important;
             transition: background-color 0.2s;
+            text-align: center;
         }
+
         .btn-download:hover {
             background-color: #374151;
         }
+
         .feature-img {
             max-width: 100%;
             height: auto;
@@ -105,107 +156,140 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
+
+        .footer-box {
+            display: inline-block;
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 4px;
+            padding: 6px 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
     </style>
 </head>
+
 <body class="flex flex-col min-h-screen">
 
-    <!-- Top Bar -->
-    <div class="header-top py-4 px-6 flex items-center shadow-md">
-        <span class="font-bold text-2xl tracking-wide">photools</span>
-        <span class="ml-4 text-sm opacity-90 italic border-l border-gray-400 pl-4">Perangkat Lunak Cetak Foto Desktop</span>
+    <div
+        class="header-top py-4 px-4 md:px-6 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left shadow-md">
+        <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
+            <span class="font-bold text-2xl tracking-wide">photools</span>
+            <span
+                class="mt-2 sm:mt-0 sm:ml-4 text-sm opacity-90 italic sm:border-l border-gray-400 pt-2 sm:pt-0 sm:pl-4">Perangkat
+                Lunak Cetak Foto Desktop</span>
+        </div>
     </div>
 
-    <!-- Main Content Area -->
-    <div class="flex flex-1 max-w-7xl w-full mx-auto p-6 gap-8">
-        
-        <!-- Sidebar -->
-        <div class="w-56 flex-shrink-0">
-            <div class="mb-8">
+    <a href="https://github.com/contact-iqbal/Photools" target="_blank" rel="noopener noreferrer" class="github-corner"
+        aria-label="Lihat kode sumber di GitHub">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
+            1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+            0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04
+            2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54
+            1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+        </svg>
+    </a>
+
+    <div class="flex flex-col md:flex-row flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 gap-6 md:gap-8">
+
+        <div class="w-full md:w-56 flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4 md:gap-0">
+            <div class="md:mb-5">
                 <div class="sidebar-header">Unduhan</div>
-                <ul class="pl-2 space-y-2 text-sm">
+                <ul class="pl-2 space-y-1 text-sm">
                     <li><a href="#download-windows">Penginstal Windows</a></li>
                     <li><a href="#source-code">Kode Sumber</a></li>
                 </ul>
             </div>
-            
-            <div class="mb-8">
+
+            <div class="md:mb-5">
                 <div class="sidebar-header">Dokumentasi</div>
-                <ul class="pl-2 space-y-2 text-sm">
+                <ul class="pl-2 space-y-1 text-sm">
                     <li><a href="#features">Fitur Utama</a></li>
                     <li><a href="#system-requirements">Persyaratan Sistem</a></li>
                     <li><a href="#quick-guide">Panduan Cepat</a></li>
                 </ul>
             </div>
-            
-            <div class="mb-8">
+
+            <div class="md:mb-5">
                 <div class="sidebar-header">Dukungan</div>
-                <ul class="pl-2 space-y-2 text-sm">
+                <ul class="pl-2 space-y-1 text-sm">
                     <li><a href="#faq">Pertanyaan Umum (FAQ)</a></li>
                     <li><a href="mailto:farisikbal304@gmail.com">Hubungi Dukungan</a></li>
                 </ul>
             </div>
-            
-            <div class="mb-8">
+
+            <div class="md:mb-5">
                 <div class="sidebar-header">Bahasa</div>
-                <ul class="pl-2 space-y-2 text-sm">
+                <ul class="pl-2 space-y-1 text-sm">
                     <li><a href="index.html">English</a></li>
                     <li><a href="index-id.html" class="font-bold">Bahasa Indonesia</a></li>
                 </ul>
             </div>
         </div>
 
-        <!-- Content -->
-        <div class="flex-1 leading-relaxed">
-            <h1 class="text-3xl font-bold mb-3 text-gray-800">Selamat Datang di photools</h1>
+        <div class="flex-1 leading-relaxed overflow-hidden">
             <p class="mb-6 text-gray-600 text-base">
-                <strong>photools</strong> adalah solusi perangkat lunak desktop yang dirancang khusus untuk mempercepat dan menstandarkan proses cetak foto untuk studio cetak. Tinggalkan metode manual yang memakan waktu, menyebabkan kesalahan ukuran, dan membuang-buang kertas atau tinta.
+                <strong>photools</strong> adalah solusi perangkat lunak desktop yang dirancang khusus untuk mempercepat
+                dan menstandarkan proses cetak foto untuk studio cetak. Tinggalkan metode manual yang memakan waktu,
+                menyebabkan kesalahan ukuran, dan membuang-buang kertas atau tinta.
             </p>
 
-            <img src="images/preview-1.png" alt="Pratinjau Aplikasi photools" class="feature-img mb-6" onerror="this.style.display='none'">
 
             <div id="features" class="section-header">Fitur Utama (Versi 1.0)</div>
-            <p class="mb-3">Aplikasi ini dilengkapi dengan berbagai fitur yang dirancang untuk operator non-teknis guna mempersingkat alur kerja:</p>
-            <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
-                <li><strong>Tata Letak Otomatis:</strong> Susun foto secara otomatis di atas kertas. Aplikasi menghitung dengan tepat berapa banyak foto yang muat dalam satu lembar dengan margin dan jarak yang dapat disesuaikan.</li>
-                <li><strong>Ukuran Cetak Lengkap:</strong> Mendukung prasetel standar (2x3, 3x4, 4R, dll.) serta ukuran khusus dengan konversi DPI/piksel otomatis.</li>
-                <li><strong>Dukungan Kertas Beragam:</strong> Pilih ukuran kertas mulai dari A4, F4/Folio, B3, hingga Legal, dengan orientasi Potret atau Lanskap.</li>
-                <li><strong>Potong & Putar Cepat:</strong> Sesuaikan rasio foto agar cocok dengan ukuran cetak yang dipilih tanpa memerlukan aplikasi eksternal.</li>
-                <li><strong>Ekspor & Cetak Langsung:</strong> Kirim langsung ke printer yang terinstal atau ekspor tata letak sebagai PDF/gambar beresolusi tinggi.</li>
+            <p class="mb-3">Aplikasi ini dilengkapi dengan berbagai fitur yang dirancang untuk operator non-teknis guna
+                mempersingkat alur kerja:</p>
+            <ul class="list-disc pl-5 md:pl-6 mb-6 space-y-2 text-gray-700">
+                <li><strong>Tata Letak Otomatis:</strong> Susun foto secara otomatis di atas kertas. Aplikasi menghitung
+                    dengan tepat berapa banyak foto yang muat dalam satu lembar dengan margin dan jarak yang dapat
+                    disesuaikan.</li>
+                <li><strong>Ukuran Cetak Lengkap:</strong> Mendukung prasetel standar (2x3, 3x4, 4R, dll.) serta ukuran
+                    khusus dengan konversi DPI/piksel otomatis.</li>
+                <li><strong>Dukungan Kertas Beragam:</strong> Pilih ukuran kertas mulai dari A4, F4/Folio, B3, hingga
+                    Legal, dengan orientasi Potret atau Lanskap.</li>
+                <li><strong>Potong & Putar Cepat:</strong> Sesuaikan rasio foto agar cocok dengan ukuran cetak yang
+                    dipilih tanpa memerlukan aplikasi eksternal.</li>
+                <li><strong>Ekspor & Cetak Langsung:</strong> Kirim langsung ke printer yang terinstal atau ekspor tata
+                    letak sebagai PDF/gambar beresolusi tinggi.</li>
             </ul>
 
-            <img src="images/preview-2.png" alt="Fitur Tata Letak Otomatis" class="feature-img mb-6 w-3/4" onerror="this.style.display='none'">
 
             <div id="download-windows" class="section-header">Unduh Setup photools</div>
             <p class="mb-4 text-gray-700">
-                Aplikasi ini berjalan sepenuhnya luring dan dirancang khusus untuk sistem operasi Windows. Instalasi mudah dan tidak memerlukan instalasi Python eksternal.
+                Aplikasi ini berjalan sepenuhnya luring dan dirancang khusus untuk sistem operasi Windows. Instalasi
+                mudah dan tidak memerlukan instalasi Python eksternal.
             </p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th class="w-1/4">Nama File</th>
-                        <th class="w-1/6">Platform</th>
-                        <th class="w-1/6">Tanggal Rilis</th>
-                        <th class="w-1/6">Aksi</th>
-                        <th class="w-1/3">Deskripsi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="font-mono text-sm text-gray-800 font-semibold">Photools_Setup.exe</td>
-                        <td>Windows 10/11</td>
-                        <td>14 Juli 2026</td>
-                        <td><a href="https://github.com/contact-iqbal/Photools/releases/download/Release/Photools_Setup.exe" class="btn-download" download>Unduh .exe</a></td>
-                        <td class="text-sm text-gray-600">
-                            <strong>Penginstal Utama (64-bit)</strong><br>
-                            Mencakup semua fitur tata letak dan mesin cetak.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="overflow-x-auto w-full mb-6 rounded border border-gray-200">
+                <table class="min-w-[600px]">
+                    <thead>
+                        <tr>
+                            <th class="w-1/4">Nama File</th>
+                            <th class="w-1/6">Platform</th>
+                            <th class="w-1/6">Tanggal Rilis</th>
+                            <th class="w-1/6">Aksi</th>
+                            <th class="w-1/3">Deskripsi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-mono text-sm text-gray-800 font-semibold">Photools_Setup.exe</td>
+                            <td>Windows 10/11</td>
+                            <td>14 Juli 2026</td>
+                            <td><a href="https://github.com/contact-iqbal/Photools/releases/download/Release/Photools_Setup.exe"
+                                    class="btn-download w-full block" download>Unduh .exe</a></td>
+                            <td class="text-sm text-gray-600">
+                                <strong>Penginstal Utama (64-bit)</strong><br>
+                                Mencakup semua fitur tata letak dan mesin cetak.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div id="system-requirements" class="section-header">Persyaratan Sistem</div>
-            <ul class="list-disc pl-6 mb-6 space-y-1 text-gray-700">
+            <ul class="list-disc pl-5 md:pl-6 mb-6 space-y-1 text-gray-700">
                 <li>Sistem Operasi: Windows 10 atau Windows 11 (disarankan 64-bit).</li>
                 <li>RAM: Minimal 4GB (disarankan 8GB untuk memproses foto dalam jumlah besar).</li>
                 <li>Penyimpanan: 200 MB ruang kosong untuk instalasi.</li>
@@ -213,12 +297,13 @@
             </ul>
 
             <div id="quick-guide" class="section-header">Panduan Penggunaan Cepat</div>
-            <ol class="list-decimal pl-6 mb-6 space-y-2 text-gray-700">
+            <ol class="list-decimal pl-5 md:pl-6 mb-6 space-y-2 text-gray-700">
                 <li>Buka aplikasi, klik <strong>Impor Foto</strong> (atau seret-dan-lepas).</li>
                 <li>Pilih ukuran cetak (misalnya, 3x4) dan potong/putar jika perlu.</li>
                 <li>Pilih ukuran kertas cetak (misalnya, A4) dan orientasi.</li>
                 <li>Aplikasi akan secara otomatis menampilkan pratinjau susunan foto (tata letak otomatis).</li>
-                <li>Klik <strong>Cetak</strong> untuk mengirim ke printer, atau <strong>Ekspor</strong> untuk menyimpan sebagai PDF/gambar.</li>
+                <li>Klik <strong>Cetak</strong> untuk mengirim to printer, atau <strong>Ekspor</strong> untuk menyimpan
+                    sebagai PDF/gambar.</li>
             </ol>
 
             <div id="faq" class="section-header">Pertanyaan Umum (FAQ)</div>
@@ -233,20 +318,38 @@
                 </div>
                 <div>
                     <h3 class="font-bold">Printer apa saja yang didukung?</h3>
-                    <p>Printer apa pun yang terinstal dan dikenali oleh sistem operasi Windows Anda akan berfungsi dengan photools.</p>
+                    <p>Printer apa pun yang terinstal dan dikenali oleh sistem operasi Windows Anda akan berfungsi
+                        dengan photools.</p>
                 </div>
             </div>
 
             <div id="source-code" class="section-header">Kode Sumber</div>
             <p class="mb-4 text-gray-700">
-                Dikembangkan menggunakan Python 3 dan PyQt. Anda bisa mendapatkan kode sumber photools melalui <a href="https://github.com/example/photools" target="_blank" rel="noopener noreferrer">Repositori GitHub</a> kami.
+                Dikembangkan menggunakan Python 3 dan PyQt. Anda bisa mendapatkan kode sumber photools melalui <a
+                    href="https://github.com/example/photools" target="_blank" rel="noopener noreferrer">Repositori
+                    GitHub</a> kami.
             </p>
-            
-            <div class="text-xs text-gray-500 mt-12 border-t border-gray-200 pt-4 pb-8">
-                &copy; 2026 Photools. Dibuat dengan ❤️ oleh contact-iqbal.
+
+            <div
+                class="flex flex-col md:flex-row justify-between items-center md:items-end text-xs text-gray-500 mt-12 border-t border-gray-200 pt-4 pb-8 gap-4">
+                <div class="footer-box text-center md:text-left">
+                    &copy; 2026 Photools. Dibuat dengan ❤️ oleh contact-iqbal.
+                </div>
+
+                <!-- Fixed Counter Container -->
+                <div class="flex flex-col items-center md:items-end min-h-[30px] min-w-[120px] text-center">
+                    <div id="fvc-parent" class="block clear-both m-0 p-0">
+                        <script type="text/javascript"
+                            src="https://www.freevisitorcounters.com/auth.php?id=788aae11a91286e3c83aa3f6043d28246e6572f4"></script>
+                        <script type="text/javascript"
+                            src="https://www.freevisitorcounters.com/en/home/counter/1597651/t/2"></script>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 
 </body>
+
 </html>
