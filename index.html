@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photools - Desktop Photo Printing Software</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        photoolsDark: '#2D3E50',
+                        photoolsLight: '#EFF0F1',
+                        photoolsAccent: '#6B7280' /* Changed from blue to gray */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #333333;
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 14px;
+        }
+        a {
+            color: #4B5563; /* Gray instead of blue */
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #1F2937;
+        }
+        .header-top {
+            background-color: #2D3E50;
+            color: #FFFFFF;
+            border-bottom: 4px solid #6B7280; /* Gray accent */
+        }
+        .section-header {
+            background-color: #F3F4F6;
+            color: #1F2937;
+            padding: 6px 10px;
+            font-weight: bold;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            border-left: 4px solid #6B7280; /* Gray accent */
+            font-size: 16px;
+        }
+        .sidebar-header {
+            background-color: #E5E7EB;
+            color: #1F2937;
+            padding: 6px 10px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            border-left: 4px solid #6B7280; /* Gray accent */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th {
+            background-color: #F9FAFB;
+            color: #374151;
+            text-align: left;
+            padding: 10px;
+            font-weight: bold;
+            border: 1px solid #E5E7EB;
+            border-bottom: 2px solid #D1D5DB;
+        }
+        td {
+            padding: 10px;
+            background-color: #FFFFFF;
+            border: 1px solid #E5E7EB;
+        }
+        tr:nth-child(even) td {
+            background-color: #F9FAFB;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #4B5563; /* Gray background */
+            color: white !important;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none !important;
+            transition: background-color 0.2s;
+        }
+        .btn-download:hover {
+            background-color: #374151;
+        }
+        .feature-img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #E5E7EB;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Top Bar -->
+    <div class="header-top py-4 px-6 flex items-center shadow-md">
+        <span class="font-bold text-2xl tracking-wide">photools</span>
+        <span class="ml-4 text-sm opacity-90 italic border-l border-gray-400 pl-4">Desktop Photo Printing Software</span>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="flex flex-1 max-w-7xl w-full mx-auto p-6 gap-8">
+        
+        <!-- Sidebar -->
+        <div class="w-56 flex-shrink-0">
+            <div class="mb-8">
+                <div class="sidebar-header">Downloads</div>
+                <ul class="pl-2 space-y-2 text-sm">
+                    <li><a href="#download-windows">Windows Installer</a></li>
+                    <li><a href="#source-code">Source Code</a></li>
+                </ul>
+            </div>
+            
+            <div class="mb-8">
+                <div class="sidebar-header">Documentation</div>
+                <ul class="pl-2 space-y-2 text-sm">
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#system-requirements">System Requirements</a></li>
+                    <li><a href="#quick-guide">Quick Guide</a></li>
+                </ul>
+            </div>
+            
+            <div class="mb-8">
+                <div class="sidebar-header">Support</div>
+                <ul class="pl-2 space-y-2 text-sm">
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="mailto:farisikbal304@gmail.com">Contact Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="mb-8">
+                <div class="sidebar-header">Language</div>
+                <ul class="pl-2 space-y-2 text-sm">
+                    <li><a href="index.html" class="font-bold">English</a></li>
+                    <li><a href="index-id.html">Bahasa Indonesia</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flex-1 leading-relaxed">
+            <h1 class="text-3xl font-bold mb-3 text-gray-800">Welcome to photools</h1>
+            <p class="mb-6 text-gray-600 text-base">
+                <strong>photools</strong> is a desktop software solution specifically designed to accelerate and standardize the photo printing process for print shops. Leave behind manual methods that consume time, cause sizing errors, and waste paper or ink.
+            </p>
+
+            <img src="images/preview-1.png" alt="photools Application Preview" class="feature-img mb-6" onerror="this.style.display='none'">
+
+            <div id="features" class="section-header">Key Features (Version 1.0)</div>
+            <p class="mb-3">This application comes with various features designed for non-technical operators to shorten the workflow:</p>
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                <li><strong>Auto-Layout Grid:</strong> Automatically arrange photos onto the paper. The application calculates exactly how many photos fit in a single sheet with customizable margins and spacing.</li>
+                <li><strong>Comprehensive Print Sizes:</strong> Supports standard presets (2x3, 3x4, 4R, etc.) as well as custom sizes with automatic DPI/pixel conversion.</li>
+                <li><strong>Diverse Paper Support:</strong> Choose paper sizes ranging from A4, F4/Folio, B3, to Legal, with Portrait or Landscape orientation.</li>
+                <li><strong>Quick Crop & Rotate:</strong> Adjust photo ratios to match the selected print size without needing external applications.</li>
+                <li><strong>Direct Export & Print:</strong> Send directly to your installed printer or export the layout as a high-resolution PDF/image.</li>
+            </ul>
+
+            <img src="images/preview-2.png" alt="Auto Layout Feature" class="feature-img mb-6 w-3/4" onerror="this.style.display='none'">
+
+            <div id="download-windows" class="section-header">Download photools Setup</div>
+            <p class="mb-4 text-gray-700">
+                The application runs completely offline and is specifically designed for Windows operating systems. Installation is straightforward and does not require an external Python installation.
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th class="w-1/4">Filename</th>
+                        <th class="w-1/6">Platform</th>
+                        <th class="w-1/6">Release Date</th>
+                        <th class="w-1/6">Action</th>
+                        <th class="w-1/3">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-mono text-sm text-gray-800 font-semibold">Photools_Setup.exe</td>
+                        <td>Windows 10/11</td>
+                        <td>July 14, 2026</td>
+                        <td><a href="installer/photools-setup-1.0.exe" class="btn-download" download>Download .exe</a></td>
+                        <td class="text-sm text-gray-600">
+                            <strong>Main Installer (64-bit)</strong><br>
+                            Includes all layouting and print engine features.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="system-requirements" class="section-header">System Requirements</div>
+            <ul class="list-disc pl-6 mb-6 space-y-1 text-gray-700">
+                <li>Operating System: Windows 10 or Windows 11 (64-bit recommended).</li>
+                <li>RAM: Minimum 4GB (8GB recommended for processing large batches of photos).</li>
+                <li>Storage: 200 MB free space for installation.</li>
+                <li>Internet Connection: <strong>Not required</strong> (Application runs 100% offline).</li>
+            </ul>
+
+            <div id="quick-guide" class="section-header">Quick Usage Guide</div>
+            <ol class="list-decimal pl-6 mb-6 space-y-2 text-gray-700">
+                <li>Open the application, click <strong>Import Photo</strong> (or drag-and-drop).</li>
+                <li>Select the print size (e.g., 3x4) and crop/rotate if necessary.</li>
+                <li>Select the printing paper size (e.g., A4) and orientation.</li>
+                <li>The application will automatically display a preview of the photo arrangement (auto-layout).</li>
+                <li>Click <strong>Print</strong> to send to the printer, or <strong>Export</strong> to save as a PDF/image.</li>
+            </ol>
+
+            <div id="faq" class="section-header">Frequently Asked Questions (FAQ)</div>
+            <div class="space-y-4 text-gray-700 mb-6">
+                <div>
+                    <h3 class="font-bold">Is photools completely free?</h3>
+                    <p>Yes, photools is completely free to use.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold">Does it require an internet connection?</h3>
+                    <p>No, the application runs 100% offline.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold">Which printers are supported?</h3>
+                    <p>Any printer that is installed and recognized by your Windows operating system will work with photools.</p>
+                </div>
+            </div>
+
+            <div id="source-code" class="section-header">Source Code</div>
+            <p class="mb-4 text-gray-700">
+                Developed using Python 3 and PyQt. You can get the photools source code via our <a href="https://github.com/example/photools" target="_blank" rel="noopener noreferrer">GitHub Repository</a>.
+            </p>
+            
+            <div class="text-xs text-gray-500 mt-12 border-t border-gray-200 pt-4 pb-8">
+                &copy; 2026 Photools. Made with ❤️ by contact-iqbal.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
