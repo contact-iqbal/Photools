@@ -20,6 +20,9 @@
 The application comes with various features designed for non-technical operators to shorten the workflow:
 
 * **Auto-Layout Grid:** Automatically arrange photos onto the paper. The application calculates exactly how many photos fit in a single sheet with customizable margins and spacing.
+* **Dynamic Theme Support:** Seamlessly switches between Light and Dark modes, adapting to your system preferences.
+* **Professional Splash Screen:** A modern startup experience with a two-panel layout (inspired by Adobe Photoshop).
+* **Smart Size Sync:** Real-time synchronization between the photo list and settings panel for accurate printing.
 * **Comprehensive Print Sizes:** Supports standard presets (2x3, 3x4, 4R, etc.) as well as custom sizes with automatic DPI/pixel conversion.
 * **Diverse Paper Support:** Choose paper sizes ranging from A4, F4/Folio, B3, to Legal, with Portrait or Landscape orientation.
 * **Quick Crop & Rotate:** Adjust photo ratios to match the selected print size without needing external applications.
